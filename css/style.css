@@ -1,0 +1,291 @@
+:root {
+    --premium-color: #dcddde;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* utility */
+
+.size {
+    padding: 50px;
+    width: 100%;
+}
+
+.b-color {
+    position: relative;
+    background: var(--premium-color);
+}
+
+ /* top */
+.top {
+    display: grid;
+    grid-template-columns: auto 270px 180px;
+}
+
+.text-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: var(--premium-color);
+}
+.text-top p {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.phone {
+    background: #000;
+}
+
+.contact {
+    background: #fff200;
+}
+
+.logo img{
+    width: 360px;
+}
+
+.menu ul{
+    display: flex;
+    list-style: none;
+    padding: 15px;
+}
+
+.menu ul li {
+    display: flex;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu ul li a:hover {
+    color: #3099bf;
+}
+
+.menu ul li img {
+    width: 43px;
+}
+
+/* slide show */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 130vh;
+    overflow: hidden;
+}
+
+.slides {
+    position: absolute;
+    width: 400%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 2s ease;
+}
+
+.slide {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide:nth-child(1) {
+    background-image: url(../img/img-1.jpg);
+}
+
+.slide:nth-child(2) {
+    background-image: url(../img/img-2.jpg);
+}
+
+.slide:nth-child(3) {
+    background-image: url(../img/img-3.jpg);
+}
+
+.slide:nth-child(4) {
+    background-image: url(../img/img-4.jpg);
+}
+
+.slide-data {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 0 20%;
+}
+
+.sd {
+    position: absolute;
+    top: 80%;
+    left: -21%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 0 20%;
+}
+
+.slide-data h1 {
+    font-family: "Anton", serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 45px;
+}
+
+.slide-data p {
+    font-family: "Cabin", serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.slide-data a {
+    text-align: center;
+}
+
+.slide-data button:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.slider .arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 60px;
+    color: var(--premium-color);
+    transition: 0.4s linear;
+}
+
+.slider .arrows:hover {
+    text-shadow: 0px 0px 10px black, 0px 0px 10px black;
+}
+
+.slider .prev {
+    left: 3%;
+}
+
+.slider .next {
+    right: 3%;
+}
+
+.dots {
+    position: relative;
+    bottom: 1%;
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background: var(--premium-color);
+}
+
+.dots span {
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    margin: 0 6px;
+    background-color: #fff;
+    border: 2px solid #333;
+    display: inline-block;
+    transition: 0.4s linear;
+}
+
+.dots span:hover {
+    background-color: #333 !important;
+    border: 2px solid #fff;
+}
+
+.dot-active {
+    background-color: #333 !important;
+    border: 2px solid #fff;
+}
+
+/* section-1 */
+
+.more img{
+    position: absolute;
+    top: 75%;
+    left: 80%;
+}
+
+.more-2 img{
+    position: absolute;
+    top: 82.5%;
+    left: 80%;
+}
+
+.bp {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 20px;
+    width: 100%;
+    padding: 50px;
+}
+
+.bp img {
+    width: 570px;
+}
+
+/* footer */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 1.5rem;
+    padding: 60px;
+}
+
+.f-5 span {
+    font-size: 20px;
+}
+
+footer .f-6 p{
+    text-align: center;
+    padding: 20px;
+}
+
+.f-1, .f-2, .f-3, .f-4 {
+    display: grid;
+} 
+
+.f-1 a, .f-2 a, .f-3 a, .f-4 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.f-5 h1, .f-5 p{
+    text-align: right;
+}
